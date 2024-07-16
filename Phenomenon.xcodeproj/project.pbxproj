@@ -14,6 +14,11 @@
 		FEFB72BE2C46A1B4006552C1 /* BaseCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEFB72BD2C46A1B4006552C1 /* BaseCoordinator.swift */; };
 		FEFB72C02C46A1BF006552C1 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEFB72BF2C46A1BF006552C1 /* AppCoordinator.swift */; };
 		FEFB72C22C46A258006552C1 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEFB72C12C46A258006552C1 /* MainCoordinator.swift */; };
+		FEFB72C42C46AA0A006552C1 /* MokData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEFB72C32C46AA0A006552C1 /* MokData.swift */; };
+		FEFB72C62C46AA31006552C1 /* Typealias.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEFB72C52C46AA31006552C1 /* Typealias.swift */; };
+		FEFB72C92C46AABB006552C1 /* PhenomenonModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEFB72C82C46AABB006552C1 /* PhenomenonModel.swift */; };
+		FEFB72CB2C46AC0A006552C1 /* PhenomenonPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEFB72CA2C46AC0A006552C1 /* PhenomenonPresenter.swift */; };
+		FEFB72CD2C46AC18006552C1 /* PhenomenonBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEFB72CC2C46AC18006552C1 /* PhenomenonBuilder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +31,11 @@
 		FEFB72BD2C46A1B4006552C1 /* BaseCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCoordinator.swift; sourceTree = "<group>"; };
 		FEFB72BF2C46A1BF006552C1 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		FEFB72C12C46A258006552C1 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		FEFB72C32C46AA0A006552C1 /* MokData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MokData.swift; sourceTree = "<group>"; };
+		FEFB72C52C46AA31006552C1 /* Typealias.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Typealias.swift; sourceTree = "<group>"; };
+		FEFB72C82C46AABB006552C1 /* PhenomenonModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhenomenonModel.swift; sourceTree = "<group>"; };
+		FEFB72CA2C46AC0A006552C1 /* PhenomenonPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhenomenonPresenter.swift; sourceTree = "<group>"; };
+		FEFB72CC2C46AC18006552C1 /* PhenomenonBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhenomenonBuilder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +68,7 @@
 		FEFB72A52C469D71006552C1 /* Phenomenon */ = {
 			isa = PBXGroup;
 			children = (
+				FEFB72C72C46AA3F006552C1 /* Support */,
 				FEFB72BB2C46A191006552C1 /* NavigationLayer */,
 				FEFB72BC2C46A19E006552C1 /* Application */,
 				FEFB72BA2C46A181006552C1 /* ScreenPhenomenon */,
@@ -71,6 +82,9 @@
 			isa = PBXGroup;
 			children = (
 				FEFB72AA2C469D71006552C1 /* PhenomenonViewController.swift */,
+				FEFB72C82C46AABB006552C1 /* PhenomenonModel.swift */,
+				FEFB72CA2C46AC0A006552C1 /* PhenomenonPresenter.swift */,
+				FEFB72CC2C46AC18006552C1 /* PhenomenonBuilder.swift */,
 			);
 			path = ScreenPhenomenon;
 			sourceTree = "<group>";
@@ -92,6 +106,15 @@
 				FEFB72A82C469D71006552C1 /* SceneDelegate.swift */,
 			);
 			path = Application;
+			sourceTree = "<group>";
+		};
+		FEFB72C72C46AA3F006552C1 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				FEFB72C32C46AA0A006552C1 /* MokData.swift */,
+				FEFB72C52C46AA31006552C1 /* Typealias.swift */,
+			);
+			path = Support;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -163,12 +186,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FEFB72C42C46AA0A006552C1 /* MokData.swift in Sources */,
 				FEFB72AB2C469D71006552C1 /* PhenomenonViewController.swift in Sources */,
+				FEFB72C92C46AABB006552C1 /* PhenomenonModel.swift in Sources */,
 				FEFB72C22C46A258006552C1 /* MainCoordinator.swift in Sources */,
 				FEFB72A72C469D71006552C1 /* AppDelegate.swift in Sources */,
 				FEFB72C02C46A1BF006552C1 /* AppCoordinator.swift in Sources */,
 				FEFB72A92C469D71006552C1 /* SceneDelegate.swift in Sources */,
+				FEFB72C62C46AA31006552C1 /* Typealias.swift in Sources */,
+				FEFB72CD2C46AC18006552C1 /* PhenomenonBuilder.swift in Sources */,
 				FEFB72BE2C46A1B4006552C1 /* BaseCoordinator.swift in Sources */,
+				FEFB72CB2C46AC0A006552C1 /* PhenomenonPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
