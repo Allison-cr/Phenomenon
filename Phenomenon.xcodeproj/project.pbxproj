@@ -19,6 +19,10 @@
 		FEFB72C92C46AABB006552C1 /* PhenomenonModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEFB72C82C46AABB006552C1 /* PhenomenonModel.swift */; };
 		FEFB72CB2C46AC0A006552C1 /* PhenomenonPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEFB72CA2C46AC0A006552C1 /* PhenomenonPresenter.swift */; };
 		FEFB72CD2C46AC18006552C1 /* PhenomenonBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEFB72CC2C46AC18006552C1 /* PhenomenonBuilder.swift */; };
+		FEFB72CF2C46B56B006552C1 /* PhenomenonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEFB72CE2C46B56B006552C1 /* PhenomenonCell.swift */; };
+		FEFB72D32C4AA701006552C1 /* Margins.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEFB72D22C4AA701006552C1 /* Margins.swift */; };
+		FEFB72D52C4D3435006552C1 /* RoundedBottomCornersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEFB72D42C4D3435006552C1 /* RoundedBottomCornersView.swift */; };
+		FEFB72D72C4EB213006552C1 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = FEFB72D62C4EB213006552C1 /* Localizable.xcstrings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +40,10 @@
 		FEFB72C82C46AABB006552C1 /* PhenomenonModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhenomenonModel.swift; sourceTree = "<group>"; };
 		FEFB72CA2C46AC0A006552C1 /* PhenomenonPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhenomenonPresenter.swift; sourceTree = "<group>"; };
 		FEFB72CC2C46AC18006552C1 /* PhenomenonBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhenomenonBuilder.swift; sourceTree = "<group>"; };
+		FEFB72CE2C46B56B006552C1 /* PhenomenonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhenomenonCell.swift; sourceTree = "<group>"; };
+		FEFB72D22C4AA701006552C1 /* Margins.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Margins.swift; sourceTree = "<group>"; };
+		FEFB72D42C4D3435006552C1 /* RoundedBottomCornersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedBottomCornersView.swift; sourceTree = "<group>"; };
+		FEFB72D62C4EB213006552C1 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +60,7 @@
 		FEFB729A2C469D71006552C1 = {
 			isa = PBXGroup;
 			children = (
+				FEFB72D62C4EB213006552C1 /* Localizable.xcstrings */,
 				FEFB72A52C469D71006552C1 /* Phenomenon */,
 				FEFB72A42C469D71006552C1 /* Products */,
 			);
@@ -72,8 +81,8 @@
 				FEFB72BB2C46A191006552C1 /* NavigationLayer */,
 				FEFB72BC2C46A19E006552C1 /* Application */,
 				FEFB72BA2C46A181006552C1 /* ScreenPhenomenon */,
-				FEFB72AF2C469D73006552C1 /* Assets.xcassets */,
 				FEFB72B42C469D73006552C1 /* Info.plist */,
+				FEFB72D12C4A9F32006552C1 /* Resource */,
 			);
 			path = Phenomenon;
 			sourceTree = "<group>";
@@ -82,9 +91,10 @@
 			isa = PBXGroup;
 			children = (
 				FEFB72AA2C469D71006552C1 /* PhenomenonViewController.swift */,
-				FEFB72C82C46AABB006552C1 /* PhenomenonModel.swift */,
 				FEFB72CA2C46AC0A006552C1 /* PhenomenonPresenter.swift */,
 				FEFB72CC2C46AC18006552C1 /* PhenomenonBuilder.swift */,
+				FEFB72C82C46AABB006552C1 /* PhenomenonModel.swift */,
+				FEFB72D02C46B570006552C1 /* Cell */,
 			);
 			path = ScreenPhenomenon;
 			sourceTree = "<group>";
@@ -113,8 +123,26 @@
 			children = (
 				FEFB72C32C46AA0A006552C1 /* MokData.swift */,
 				FEFB72C52C46AA31006552C1 /* Typealias.swift */,
+				FEFB72D22C4AA701006552C1 /* Margins.swift */,
+				FEFB72D42C4D3435006552C1 /* RoundedBottomCornersView.swift */,
 			);
 			path = Support;
+			sourceTree = "<group>";
+		};
+		FEFB72D02C46B570006552C1 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				FEFB72CE2C46B56B006552C1 /* PhenomenonCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		FEFB72D12C4A9F32006552C1 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				FEFB72AF2C469D73006552C1 /* Assets.xcassets */,
+			);
+			path = Resource;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -159,6 +187,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ru,
 			);
 			mainGroup = FEFB729A2C469D71006552C1;
 			productRefGroup = FEFB72A42C469D71006552C1 /* Products */;
@@ -175,6 +204,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FEFB72D72C4EB213006552C1 /* Localizable.xcstrings in Resources */,
 				FEFB72B02C469D73006552C1 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -188,6 +218,7 @@
 			files = (
 				FEFB72C42C46AA0A006552C1 /* MokData.swift in Sources */,
 				FEFB72AB2C469D71006552C1 /* PhenomenonViewController.swift in Sources */,
+				FEFB72CF2C46B56B006552C1 /* PhenomenonCell.swift in Sources */,
 				FEFB72C92C46AABB006552C1 /* PhenomenonModel.swift in Sources */,
 				FEFB72C22C46A258006552C1 /* MainCoordinator.swift in Sources */,
 				FEFB72A72C469D71006552C1 /* AppDelegate.swift in Sources */,
@@ -195,7 +226,9 @@
 				FEFB72A92C469D71006552C1 /* SceneDelegate.swift in Sources */,
 				FEFB72C62C46AA31006552C1 /* Typealias.swift in Sources */,
 				FEFB72CD2C46AC18006552C1 /* PhenomenonBuilder.swift in Sources */,
+				FEFB72D32C4AA701006552C1 /* Margins.swift in Sources */,
 				FEFB72BE2C46A1B4006552C1 /* BaseCoordinator.swift in Sources */,
+				FEFB72D52C4D3435006552C1 /* RoundedBottomCornersView.swift in Sources */,
 				FEFB72CB2C46AC0A006552C1 /* PhenomenonPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

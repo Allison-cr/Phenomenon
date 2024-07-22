@@ -1,0 +1,21 @@
+{
+  "images" : [
+    {
+      "filename" : "Default_Create_an_image_of_a_rainbow_after_a_rainstorm_with_a_3.jpg",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

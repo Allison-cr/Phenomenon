@@ -6,3 +6,7 @@
 //
 
 import Foundation
+import UIKit
+
+typealias CollectionDataSource = UICollectionViewDiffableDataSource<PhenomenonModel.Section,PhenomenonModel.PhenomenonDataModel>
+typealias CollectionSnapShot = NSDiffableDataSourceSnapshot<PhenomenonModel.Section,PhenomenonModel.PhenomenonDataModel>

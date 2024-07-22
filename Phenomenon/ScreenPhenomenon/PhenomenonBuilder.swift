@@ -11,6 +11,7 @@ final class PhenomenonBuilder {
     func assembly() -> PhenomenonViewController {
         let viewController = PhenomenonViewController()
         let presenter = PhenomenonPresenter()
+        presenter.viewController = viewController
         viewController.presenter = presenter
         return viewController
     }
