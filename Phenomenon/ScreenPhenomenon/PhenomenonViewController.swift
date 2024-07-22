@@ -15,6 +15,7 @@ protocol IPhenomenonViewController: AnyObject {
 class PhenomenonViewController: UIViewController {
     
     // MARK: Variables
+    private lazy var textLabel: UILabel = settingTextLabel()
     private lazy var headerView: UIView = settingHeaderView()
     private lazy var houseImageView: UIImageView = setupBackground()
     private lazy var collectionView: UICollectionView = settingCollectionView()
@@ -62,6 +63,15 @@ private extension PhenomenonViewController {
         view.addSubview(headerView)
         return headerView
     }
+    
+    func settingTextLabel() -> UILabel {
+        let label = UILabel()
+        label.text = "chose_the_weather".localized
+        label.font = UIFont.systemFont(ofSize: 18, weight: .bold)
+        label.translatesAutoresizingMaskIntoConstraints = false
+        headerView.addSubview(label)
+        return label
+    }
 }
 
 // MARK: - Load Data
@@ -74,6 +84,7 @@ extension PhenomenonViewController: IPhenomenonViewController {
             self.randomStart()
         }
     }
+    
     func updateBackground(image: UIImage) {
         UIView.transition(with: houseImageView, duration: 0.5, options: .transitionCrossDissolve, animations: {
             self.houseImageView.image = image
@@ -99,6 +110,7 @@ private extension PhenomenonViewController {
             forCellWithReuseIdentifier: "\(PhenomenonCell.self)"
         )
         collection.translatesAutoresizingMaskIntoConstraints = false
+        collection.alwaysBounceVertical = false
         headerView.addSubview(collection)
         return collection
     }
@@ -113,7 +125,7 @@ private extension PhenomenonViewController {
         ])
         
         NSLayoutConstraint.activate([
-            collectionView.topAnchor.constraint(equalTo: headerView.topAnchor, constant: 64),
+            collectionView.topAnchor.constraint(equalTo: textLabel.bottomAnchor, constant: 8),
             collectionView.leadingAnchor.constraint(equalTo: headerView.leadingAnchor, constant: 16),
             collectionView.trailingAnchor.constraint(equalTo: headerView.trailingAnchor, constant: -16),
             collectionView.bottomAnchor.constraint(equalTo: headerView.bottomAnchor, constant: -16)
@@ -125,6 +137,14 @@ private extension PhenomenonViewController {
             headerView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             headerView.heightAnchor.constraint(equalToConstant: Margins.dividedScreen + 16)
         ])
+        
+        NSLayoutConstraint.activate([
+            textLabel.topAnchor.constraint(equalTo: view.topAnchor, constant: 64),
+            textLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor,constant: 16),
+            textLabel.heightAnchor.constraint(equalToConstant: 16)
+         ])
+        
+        
         view.bringSubviewToFront(headerView)
     }
 }

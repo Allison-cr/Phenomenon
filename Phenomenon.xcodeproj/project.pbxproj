@@ -23,6 +23,7 @@
 		FEFB72D32C4AA701006552C1 /* Margins.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEFB72D22C4AA701006552C1 /* Margins.swift */; };
 		FEFB72D52C4D3435006552C1 /* RoundedBottomCornersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEFB72D42C4D3435006552C1 /* RoundedBottomCornersView.swift */; };
 		FEFB72D72C4EB213006552C1 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = FEFB72D62C4EB213006552C1 /* Localizable.xcstrings */; };
+		FEFB72D92C4EB5D8006552C1 /* String+ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEFB72D82C4EB5D8006552C1 /* String+ext.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		FEFB72D22C4AA701006552C1 /* Margins.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Margins.swift; sourceTree = "<group>"; };
 		FEFB72D42C4D3435006552C1 /* RoundedBottomCornersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedBottomCornersView.swift; sourceTree = "<group>"; };
 		FEFB72D62C4EB213006552C1 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
+		FEFB72D82C4EB5D8006552C1 /* String+ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+ext.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,7 +62,6 @@
 		FEFB729A2C469D71006552C1 = {
 			isa = PBXGroup;
 			children = (
-				FEFB72D62C4EB213006552C1 /* Localizable.xcstrings */,
 				FEFB72A52C469D71006552C1 /* Phenomenon */,
 				FEFB72A42C469D71006552C1 /* Products */,
 			);
@@ -121,10 +122,12 @@
 		FEFB72C72C46AA3F006552C1 /* Support */ = {
 			isa = PBXGroup;
 			children = (
+				FEFB72E02C4EBBD4006552C1 /* Localize */,
 				FEFB72C32C46AA0A006552C1 /* MokData.swift */,
 				FEFB72C52C46AA31006552C1 /* Typealias.swift */,
 				FEFB72D22C4AA701006552C1 /* Margins.swift */,
 				FEFB72D42C4D3435006552C1 /* RoundedBottomCornersView.swift */,
+				FEFB72D82C4EB5D8006552C1 /* String+ext.swift */,
 			);
 			path = Support;
 			sourceTree = "<group>";
@@ -143,6 +146,14 @@
 				FEFB72AF2C469D73006552C1 /* Assets.xcassets */,
 			);
 			path = Resource;
+			sourceTree = "<group>";
+		};
+		FEFB72E02C4EBBD4006552C1 /* Localize */ = {
+			isa = PBXGroup;
+			children = (
+				FEFB72D62C4EB213006552C1 /* Localizable.xcstrings */,
+			);
+			path = Localize;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -226,6 +237,7 @@
 				FEFB72A92C469D71006552C1 /* SceneDelegate.swift in Sources */,
 				FEFB72C62C46AA31006552C1 /* Typealias.swift in Sources */,
 				FEFB72CD2C46AC18006552C1 /* PhenomenonBuilder.swift in Sources */,
+				FEFB72D92C4EB5D8006552C1 /* String+ext.swift in Sources */,
 				FEFB72D32C4AA701006552C1 /* Margins.swift in Sources */,
 				FEFB72BE2C46A1B4006552C1 /* BaseCoordinator.swift in Sources */,
 				FEFB72D52C4D3435006552C1 /* RoundedBottomCornersView.swift in Sources */,
