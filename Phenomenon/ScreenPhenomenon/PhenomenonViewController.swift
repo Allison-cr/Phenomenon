@@ -12,7 +12,7 @@ protocol IPhenomenonViewController: AnyObject {
     func updateBackground(image: UIImage)
 }
 
-class PhenomenonViewController: UIViewController {
+final class PhenomenonViewController: UIViewController {
     
     // MARK: Variables
     private lazy var textLabel: UILabel = settingTextLabel()
@@ -30,20 +30,6 @@ class PhenomenonViewController: UIViewController {
         settingMainView()
         collectionView.delegate = self
         presenter?.loadData()
-    }
- 
-  
-    // MARK: - Applying Random Effect
-    private func randomStart() {
-        guard !elements.isEmpty else { return }
-        let randomIndex = Int.random(in: 0..<elements.count)
-        let phenomenon = PhenomenonModel.allCases[randomIndex]
-        let indexPath = IndexPath(item: randomIndex, section: 0)
-        self.collectionView.scrollToItem(at: indexPath, at: .top, animated: false)
-
-        presenter?.updateWeatherEffect(in: view, for: randomIndex)
-        presenter?.updateWeatherBackground(for: phenomenon)
-        presenter?.updateHeaderBackground(in: headerView, for: phenomenon)
     }
 }
 // MARK: - Backoground
@@ -116,7 +102,6 @@ private extension PhenomenonViewController {
     }
     
     func settingLayout() {
-        
         NSLayoutConstraint.activate([
             houseImageView.topAnchor.constraint(equalTo: view.topAnchor, constant: Margins.dividedScreen - 16),
             houseImageView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
@@ -143,11 +128,10 @@ private extension PhenomenonViewController {
             textLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor,constant: 16),
             textLabel.heightAnchor.constraint(equalToConstant: 16)
          ])
-        
-        
         view.bringSubviewToFront(headerView)
     }
 }
+
 // MARK: - Setting DataSource and Layout collection
 private extension PhenomenonViewController {
     func settingDataSource() {
@@ -205,13 +189,28 @@ private extension PhenomenonViewController {
         return section
     }
 }
+
 // MARK: - UICollectionViewDelegate, UIScrollViewDelegate
 extension PhenomenonViewController: UICollectionViewDelegate, UIScrollViewDelegate {
-            
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         presenter?.updateWeatherEffect(in: view, for: indexPath.item)
         let phenomenon = PhenomenonModel.allCases[indexPath.item]
         presenter?.updateWeatherBackground(for: phenomenon)
         presenter?.updateHeaderBackground(in: headerView, for: phenomenon)
       }
+}
+
+// MARK: - Applying Random Effect
+extension PhenomenonViewController {
+    func randomStart() {
+        guard !elements.isEmpty else { return }
+        let randomIndex = Int.random(in: 0..<elements.count)
+        let phenomenon = PhenomenonModel.allCases[randomIndex]
+        let indexPath = IndexPath(item: randomIndex, section: 0)
+        self.collectionView.scrollToItem(at: indexPath, at: .top, animated: false)
+
+        presenter?.updateWeatherEffect(in: view, for: randomIndex)
+        presenter?.updateWeatherBackground(for: phenomenon)
+        presenter?.updateHeaderBackground(in: headerView, for: phenomenon)
+    }
 }

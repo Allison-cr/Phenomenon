@@ -23,45 +23,6 @@ final class PhenomenonPresenter: IPhenomenonPresenter {
         viewController?.viewReady(model: model)
     }
     
-    func updateWeatherEffect(in view: UIView, for pageIndex: Int) {
-        view.layer.sublayers?.removeAll(where: { $0 is CAEmitterLayer || $0 is CAShapeLayer })
-        
-        switch pageIndex {
-        case 0:
-            setupSnow(in: view)
-        case 1:
-            setupRain(in: view)
-        case 2:
-            setupLightning(in: view)
-        case 3:
-            setupRainbowArcs(in: view)
-        default:
-            break
-        }
-    }
-    
-    func updateWeatherBackground(for phenomenon: PhenomenonModel) {
-            let backgroundImage = phenomenon.imageBackgound()
-            viewController?.updateBackground(image: backgroundImage)
-    }
-    
-    func updateHeaderBackground(in view: UIView, for phenomenon: PhenomenonModel) {
-        view.layer.sublayers?.removeAll { $0 is CAGradientLayer }
-
-        let colors = phenomenon.getColors()
-        let gradientLayer = CAGradientLayer()
-        gradientLayer.frame = view.bounds 
-        gradientLayer.colors = colors
-        view.layer.insertSublayer(gradientLayer, at: 0)
-        
-        let gradientChangeAnimation = CABasicAnimation(keyPath: "colors")
-        gradientChangeAnimation.duration = 0.5
-        gradientChangeAnimation.toValue = colors
-        gradientChangeAnimation.fillMode = .forwards
-        gradientChangeAnimation.isRemovedOnCompletion = false
-        gradientLayer.add(gradientChangeAnimation, forKey: "colorChange")
-        gradientLayer.colors = colors
-    }
 }
 
 extension PhenomenonPresenter {
@@ -211,4 +172,44 @@ extension PhenomenonPresenter {
     
     return path
 }
+    
+    func updateHeaderBackground(in view: UIView, for phenomenon: PhenomenonModel) {
+        view.layer.sublayers?.removeAll { $0 is CAGradientLayer }
+
+        let colors = phenomenon.getColors()
+        let gradientLayer = CAGradientLayer()
+        gradientLayer.frame = view.bounds
+        gradientLayer.colors = colors
+        view.layer.insertSublayer(gradientLayer, at: 0)
+        
+        let gradientChangeAnimation = CABasicAnimation(keyPath: "colors")
+        gradientChangeAnimation.duration = 0.5
+        gradientChangeAnimation.toValue = colors
+        gradientChangeAnimation.fillMode = .forwards
+        gradientChangeAnimation.isRemovedOnCompletion = false
+        gradientLayer.add(gradientChangeAnimation, forKey: "colorChange")
+        gradientLayer.colors = colors
+    }
+    
+    func updateWeatherEffect(in view: UIView, for pageIndex: Int) {
+        view.layer.sublayers?.removeAll(where: { $0 is CAEmitterLayer || $0 is CAShapeLayer })
+        
+        switch pageIndex {
+        case 0:
+            setupSnow(in: view)
+        case 1:
+            setupRain(in: view)
+        case 2:
+            setupLightning(in: view)
+        case 3:
+            setupRainbowArcs(in: view)
+        default:
+            break
+        }
+    }
+    
+    func updateWeatherBackground(for phenomenon: PhenomenonModel) {
+            let backgroundImage = phenomenon.imageBackgound()
+            viewController?.updateBackground(image: backgroundImage)
+    }
 }

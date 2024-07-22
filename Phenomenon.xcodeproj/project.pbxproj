@@ -46,6 +46,7 @@
 		FEFB72D42C4D3435006552C1 /* RoundedBottomCornersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedBottomCornersView.swift; sourceTree = "<group>"; };
 		FEFB72D62C4EB213006552C1 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		FEFB72D82C4EB5D8006552C1 /* String+ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+ext.swift"; sourceTree = "<group>"; };
+		FEFB72E12C4EBC47006552C1 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +63,7 @@
 		FEFB729A2C469D71006552C1 = {
 			isa = PBXGroup;
 			children = (
+				FEFB72E12C4EBC47006552C1 /* README.md */,
 				FEFB72A52C469D71006552C1 /* Phenomenon */,
 				FEFB72A42C469D71006552C1 /* Products */,
 			);

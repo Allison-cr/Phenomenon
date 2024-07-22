@@ -16,10 +16,10 @@ final class MainCoordinator: ICoordinator {
     }
     
     func start() {
-        runMenuFlow()
+        runMainFlow()
     }
      
-    private func runMenuFlow() {
+    private func runMainFlow() {
         let viewController = PhenomenonBuilder().assembly()
         navigationController.isNavigationBarHidden = true
         navigationController.setViewControllers([viewController], animated: true)
